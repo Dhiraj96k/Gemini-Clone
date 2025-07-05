@@ -7,7 +7,7 @@ function Main() {
         <div className='main'>
             <div className='nav'>
                 <p>Gemini</p>
-                <img src={assets.user_icon} alt="" />
+                <img src={assets.user_icon} alt="user_icon" />
             </div>
             <div className="main-container">
                 <div className="greet">
@@ -35,7 +35,7 @@ function Main() {
                 <div className="main-bottom">
                     <div className="search-box">
                         <input type="text" placeholder='Enter a Prompt here' />
-                        <div>
+                        <div className='imgdiv'>
                             <img src={assets.gallery_icon} alt="" />
                             <img src={assets.mic_icon} alt="" />
                             <img src={assets.send_icon} alt="" />
