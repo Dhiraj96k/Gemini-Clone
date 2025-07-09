@@ -1,8 +1,7 @@
 import { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } from "@google/generative-ai";
 
-const MODEL_NAME = "gemini-1.5-pro"; // gomini-1.0-pro is incorrect or deprecated
-const API_KEY = ""; // Replace with your actual API key
-
+const MODEL_NAME = "gemini-1.5-pro"; 
+const API_KEY = "AIzaSyCGXUzvgxxIwEEpoAFyoVALOKer2TW6Ja0"; 
 async function runChat(prompt) {
     const genAI = new GoogleGenerativeAI(API_KEY);
     const model = genAI.getGenerativeModel({ model: MODEL_NAME });
@@ -36,7 +35,7 @@ async function runChat(prompt) {
     const chat = await model.startChat({
         generationConfig,
         safetySettings,
-        history: [], // Optional: Add message history if needed
+        history: [],
     });
 
     const result = await chat.sendMessage(prompt);
